@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  wxsite:
+    build: .
+    container_name: wxsite
+    restart: always
+    ports:
+      - "3311:3311"       # 容器内 Node.js HTTPS 端口映射
+    volumes:
+      - ./dist:/app/dist                  # 前端静态文件
+

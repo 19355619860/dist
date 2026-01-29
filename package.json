@@ -1,0 +1,13 @@
+{
+  "name": "keben-static-site",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/generate.js"
+  },
+  "dependencies": {
+    "xlsx": "^0.18.5",
+    "pinyin": "^2.11.2",
+    "express": "^4.18.2"
+  }
+}

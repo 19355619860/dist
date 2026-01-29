@@ -1,0 +1,158 @@
+{{breadcrumb}}
+
+<h1>{{title}}</h1>
+
+<main class="detail-main">
+  <!-- 图片容器 -->
+  <div class="detail-cover-wrap" style="position: relative;">
+    <img src="{{image_url}}"
+         alt="{{alt}}"
+         class="detail-cover"
+         id="mainImage"
+         onclick="openModal()">
+    
+    <!-- 提示文字 -->
+    <div class="image-tip">
+      点击查看大图
+    </div>
+  </div>
+  
+  <!-- 模态框容器 -->
+  <div id="imageModal" class="modal" onclick="closeModal()">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="modalImage">
+    <div id="caption"></div>
+  </div>
+
+  <div class="item-id">
+    资源编码：{{id}}
+  </div>
+  
+  <p class="get-tip">
+    <strong>资源获取方式：</strong><br>
+    扫右上角二维码，关注公众号后，输入《资源编码》或《666》快速获取电子课本
+  </p>
+
+  <h2>教材简介</h2>
+  <p>
+    《{{title}}》是{{col1}}阶段配套使用的{{col3}}教材，  
+    由{{col4}}出版社编写，适合{{col1}}{{col2}}学生使用。
+  </p>
+
+  <h2>适用对象</h2>
+  <ul>
+    <li>{{col1}}{{col2}}在校学生</li>
+    <li>{{col3}}同步学习与复习</li>
+    <li>{{col1}}阶段教学使用</li>
+  </ul>
+
+  <h2>教材特点</h2>
+  <ul>
+    <li>版本权威，内容系统</li>
+    <li>结构清晰，循序渐进</li>
+    <li>配合课堂教学与课后学习</li>
+  </ul>
+
+  <h2>电子教材说明</h2>
+  <p>
+    本页面提供《{{title}}》相关电子教材资源信息，  
+    仅用于学习与教学参考。
+  </p>
+
+  {{source}}
+
+</main>
+
+<script>
+// 打开模态框
+function openModal() {
+  const modal = document.getElementById("imageModal");
+  const modalImg = document.getElementById("modalImage");
+  const captionText = document.getElementById("caption");
+
+  const img = document.getElementById("mainImage");
+  modal.style.display = "block";
+  modalImg.src = img.src;
+  captionText.innerHTML = img.alt;
+}
+
+// 关闭模态框
+function closeModal() {
+  document.getElementById("imageModal").style.display = "none";
+}
+
+// 点击遮罩关闭
+window.onclick = function(e) {
+  const modal = document.getElementById("imageModal");
+  if (e.target === modal) {
+    closeModal();
+  }
+}
+
+// 按 ESC 键关闭模态框
+window.addEventListener("keydown", function(event) {
+  if (event.key === "Escape") {
+    closeModal();
+  }
+});
+
+// 图片滚轮缩放功能
+let zoomScale = 1;
+const modalImg = document.getElementById("modalImage");
+
+modalImg.addEventListener('wheel', function(event) {
+  event.preventDefault();
+  if (event.deltaY > 0) {
+    zoomScale *= 0.9; // Zoom out
+  } else {
+    zoomScale *= 1.1; // Zoom in
+  }
+  modalImg.style.transform = `scale(${zoomScale})`;
+});
+
+// 图片拖拽功能
+let isDragging = false;
+let offsetX, offsetY;
+
+modalImg.addEventListener('mousedown', function(event) {
+  isDragging = true;
+  offsetX = event.clientX - modalImg.offsetLeft;
+  offsetY = event.clientY - modalImg.offsetTop;
+});
+
+window.addEventListener('mousemove', function(event) {
+  if (isDragging) {
+    modalImg.style.left = `${event.clientX - offsetX}px`;
+    modalImg.style.top = `${event.clientY - offsetY}px`;
+  }
+});
+
+window.addEventListener('mouseup', function() {
+  isDragging = false;
+});
+
+
+</script>
+
+<style>
+/* 图片提示文字样式 */
+.image-tip {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 10px;
+  border-radius: 5px;
+  display: none;  /* 默认不显示 */
+}
+
+/* 显示提示 */
+.detail-cover-wrap:hover .image-tip {
+  display: block;
+}
+</style>
+
