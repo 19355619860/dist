@@ -1,0 +1,462 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<title>小学 二年级 艺术 教科版 - 电子课本资源网</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="canonical" href="xiaoxue/ernianji/yishu/jiaokeban/index.html">
+<link rel="icon" href="../../../../peizhi/tubiao.png" type="image/png">
+<style>
+
+
+/* ===== 顶部站点抬头 ===== */
+.site-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  height: 64px;
+  border-bottom: 1px solid #eee;
+  background: #fff;
+
+  font-size: 20px;
+  font-weight: 600;
+  color: #333;
+}
+
+/* 站点 logo */
+.site-logo {
+  width: 32px;
+  height: 32px;
+}
+
+/* 站点标题 */
+.site-title {
+  font-size: 38px;
+  font-weight: 700;
+  color: #1f2d3d;
+  letter-spacing: 1.5px;
+}
+
+
+body { margin:0;font-family:sans-serif;background:#fff; } /* 页面主体：重置默认外边距，设置字体与背景色 */
+header { background:#409eff;color:#fff;padding:12px 16px;font-size:18px;font-weight:bold; } /* 页头样式：蓝色背景、白字、内边距和加粗 */
+
+/* ===== 顶部站点抬头 ===== */
+.site-header {
+  display: flex; /* 使用 flex 布局，便于水平居中与对齐 */
+  align-items: center; /* 垂直居中对齐内容 */
+  justify-content: center; /* 水平居中对齐内容 */
+  gap: 10px; /* 子元素之间的间距 */
+
+  height: 54px; /* 抬头高度 */
+  border-bottom: 2px solid #cfcfcf; /* 底部细线分隔 */
+  background: #ffffff; /* 背景色 */
+
+  font-size: 20px; /* 文本大小 */
+  font-weight: 600; /* 字重 */
+  color: #20c2f3; /* 文本颜色 */
+}
+
+/* 站点 logo */
+.site-logo {
+  width: 38px; /* logo 宽度 */
+  height: 38px; /* logo 高度 */
+}
+
+/* 站点标题 */
+.site-title {
+  font-size: 38px; /* 标题字号，突出站点名称 */
+  font-weight: 700; /* 加粗 */
+  color: #3d8cf3; /* 标题颜色 */
+  letter-spacing: 1.5px; /* 字间距，增强视觉感 */
+}
+footer { background:#f5f5f5;color:#666;padding:12px 16px;font-size:12px;text-align:center;margin-top:40px; } /* 页脚样式：浅灰背景、居中文本 */
+.grid { /* 卡片网格容器 */
+  display:grid; /* 使用 CSS Grid 布局 */
+  grid-template-columns:repeat(5,1fr); /* 五列等宽布局 */
+  column-gap: 10px; /* 列间距 */
+  row-gap: 10px; /* 行间距 */
+  max-width:1150px; /* 最大宽度限制 */
+  margin:auto; /* 水平居中 */
+}
+/* 页面主容器：限制宽度并提供左右内边距，保证标题与网格左对齐 */
+.container { max-width:1150px; margin:0 auto; padding:0 16px; }
+/* 统一页面主标题样式与下边距，便于视觉间隔规范 */
+h1 {
+  margin: 10px 0 10px; /* 上 18 下 10 的间距，按设计规范可调整 */
+  font-size: 22px; /* 保持标题层级感 */
+  line-height: 1.2;
+}
+.card { /* 单个商品卡片容器 */
+  border:1px solid #eee; /* 浅边框 */
+  padding:8px; /* 内边距 */
+  display:flex; /* 使用 flex 布局便于垂直分布 */
+  flex-direction:column; /* 垂直排列子元素 */
+  justify-content:space-between; /* 主轴两端对齐，撑满高度 */
+  max-width:220px; /* 卡片最大宽度 */
+  max-height:440px; /* 卡片最大高度，避免过长 */
+  box-sizing:border-box; /* 包括边框与内边距在内的尺寸计算 */
+}
+.card img { /* 卡片中的封面图片 */
+  width: 100%;               /* 宽度占满容器 */
+  height: 100%;              /* 高度铺满容器 */
+  aspect-ratio: 1 / 1.414;   /* A4 竖向比例，保持封面纵横比 */
+  object-fit: cover;         /* 裁剪填满容器 */
+  object-position: right top;/* 以右上角为基准裁剪 */
+  background: #fafafa;       /* 图片占位背景 */
+  border: 1px solid #f0f0f0; /* 图片的浅边框 */
+}
+.card h3 { /* 卡片标题 */
+  font-size:14px; /* 标题字体大小 */
+  line-height:1.4; /* 行高 */
+  height:2.8em; /* 限制两行显示高度 */
+  overflow:hidden; /* 超出隐藏 */
+  margin:4px 0; /* 上下间距 */
+}
+.card p { font-size:12px;color:#666;margin:4px 0; } /* 卡片内的描述与元信息：小号灰色文字 */
+.breadcrumb a{margin-right:8px;} /* 面包屑链接右间距 */
+.filter-box { /* 筛选控件容器 */
+  background:#fafafa; /* 浅背景 */
+  border:1px solid #eee; /* 边框 */
+  padding:5px 5px; /* 内边距 */
+  margin-bottom:5px; /* 底部间距 */
+  font-size:14px; /* 文本大小 */
+}
+.filter-box .nav-level-0,
+.filter-box .nav-level-1,
+.filter-box .nav-level-2,
+.filter-box .nav-level-3 {
+  display:flex; /* 横向排列筛选项 */
+  flex-wrap:wrap; /* 换行支持 */
+  align-items:center; /* 垂直居中 */
+  margin-bottom:8px; /* 各级之间间距 */
+}
+.filter-box .nav-level-0::before { content:"学段："; } /* 第0级前置标签 */
+.filter-box .nav-level-1::before { content:"年级："; } /* 第1级前置标签 */
+.filter-box .nav-level-2::before { content:"学科："; } /* 第2级前置标签 */
+.filter-box .nav-level-3::before { content:"版本："; } /* 第3级前置标签 */
+.filter-box .nav-level-0::before,
+.filter-box .nav-level-1::before,
+.filter-box .nav-level-2::before,
+.filter-box .nav-level-3::before {
+  width:64px;color:#666;flex-shrink:0; /* 前缀宽度与颜色，防止收缩 */
+}
+.filter-box a { /* 筛选项链接样式 */
+  margin:4px 8px 4px 0; /* 外边距 */
+  padding:4px 10px; /* 内边距 */
+  border:1px solid #ddd; /* 边框 */
+  border-radius:4px; /* 圆角 */
+  background:#b0ffbb; /* 背景色 */
+  color:#000000; /* 文字颜色 */
+  text-decoration:none; /* 无下划线 */
+  transition:all .15s; /* 悬停过渡 */
+}
+.filter-box a:hover {
+  background:#409eff;color:#fff;border-color:#409eff; /* 悬停变蓝 */
+}
+#peizhiPreviewWrap { /* 右侧固定二维码预览容器 */
+  position: fixed; /* 固定定位 */
+  right: 10px; /* 距右 10px */
+  top: 90px; /* 距顶部 90px */
+  width: 190px; /* 宽度 */
+  text-align: center; /* 文本居中 */
+  z-index: 999; /* 置顶层级 */
+}
+
+#peizhiPreviewWrap img { /* 预览图片样式 */
+  width: 190px; /* 固定尺寸 */
+  height: 190px; /* 高度 */
+  object-fit: contain; /* 保持比例 */
+  border-radius: 8px; /* 圆角 */
+  border: 1px solid #ddd; /* 边框 */
+}
+
+.peizhi-caption { /* 预览下方说明文本 */
+  margin-top: 4px; /* 上间距 */
+  font-size: 12px; /* 字体大小 */
+  line-height: 1.2; /* 行高 */
+  color: #333; /* 文字颜色 */
+}
+
+
+
+.pager { /* 分页条容器 */
+  margin: 30px 0; /* 上下外边距 */
+  text-align: center; /* 居中 */
+  font-size: 14px; /* 字体大小 */
+}
+
+.pager a,
+.pager span { /* 分页链接与文本样式 */
+  display: inline-block; /* 行内块 */
+  margin: 0 4px; /* 间距 */
+  padding: 4px 10px; /* 内边距 */
+  border: 1px solid #ddd; /* 边框 */
+  border-radius: 4px; /* 圆角 */
+  text-decoration: none; /* 无下划线 */
+  color: #333; /* 文字颜色 */
+  background: #fff; /* 背景 */
+}
+
+.pager a:hover {
+  background: #409eff; /* 悬停背景 */
+  color: #fff; /* 悬停文字 */
+  border-color: #409eff; /* 悬停边框 */
+}
+
+.pager .current {
+  background: #409eff; /* 当前页样式 */
+  color: #fff;
+  border-color: #409eff;
+  font-weight: bold; /* 加粗 */
+}
+
+.pager .disabled {
+  color: #aaa; /* 禁用样式 */
+  background: #f5f5f5;
+  border-color: #eee;
+}
+
+.pager .jump {
+  margin-left: 10px; /* 跳转输入框左侧空隙 */
+}
+
+.pager input { /* 分页跳转输入框 */
+  width: 50px;
+  padding: 3px;
+  margin: 0 4px;
+}
+
+
+.card-link { /* 可复用的卡片链接类 */
+  color: inherit; /* 继承颜色 */
+  text-decoration: none; /* 无下划线 */
+  display: flex; /* 便于竖排内容 */
+  flex-direction: column;
+}
+
+.card-text { /* 卡片补充文本 */
+  font-size: 12px;
+  line-height: 1.4;
+  margin-top: 4px;
+  color: #555;
+}
+
+.card-text.tip {
+  color: #d14; /* 警示/提示文本颜色 */
+  font-weight: 600; /* 稍微加粗 */
+}
+
+.card-text.code {
+  color: #333; /* 代码/编号样式 */
+  font-weight: bold;
+}
+
+.card-text.meta {
+  color: #666; /* 元信息颜色 */
+}
+
+/* ===== 面包屑按钮化 ===== */
+.breadcrumb {
+  padding: 10px 16px;   /* 👈 关键：上下 左右 */
+  margin-bottom: 12px;
+  background: #fafafa;
+  border: 1px solid #eee;
+  border-radius: 6px;
+  font-size: 14px;
+}
+.breadcrumb a {
+  padding: 4px 10px;
+  border: 1px solid #ddd;
+  border-radius: 14px;
+  background: #ffb7b7;
+  color: #333;
+  text-decoration: none;
+  transition: all .15s;
+}
+
+/* hover 效果 */
+.breadcrumb a:hover {
+  background: #409eff;
+  color: #fff;
+  border-color: #409eff;
+}
+
+/* 隐藏 > 符号（如果是纯文本） */
+.breadcrumb {
+  --hide-sep: 1;
+}
+.breadcrumb > * {
+  margin-right: 0;
+}
+
+/* 学科导航防重叠终极修复 */
+.filter-box .nav-level-2 {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(90px, max-content));
+  gap: 8px 10px;
+}
+
+.filter-box a {
+  display: inline-flex;
+  align-items: center;
+  line-height: 1.4;  /* 禁止写死 */
+  white-space: nowrap;
+}
+/* 详情页：获取资源提示 */
+.get-tip {
+  color: #e60012;           /* 正红色 */
+  font-weight: bold;
+  margin-top: 16px;
+  line-height: 1.8;
+}
+.item-id {
+  font-size: 15px;
+  font-weight: bold;   /* ✅ 字体加粗 */
+  color: #ff2b2b;
+  margin-bottom: 12px;
+}
+/* ===== 详情页封面容器 ===== */
+.detail-cover-wrap {
+  height: 620px;                  /* ✅ 你唯一需要控制的值 */
+  aspect-ratio: 1 / 1.414;        /* ✅ A4 竖向比例 */
+  overflow: hidden;
+  background: #fafafa;
+  border: 1px solid #eee;
+  margin: 20px auto; 
+}
+
+/* ===== 图片填充规则 ===== */
+.detail-cover {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;              /* 裁剪填满 */
+  object-position: right top;     /* 右上角基准裁剪 */
+  display: block;
+}
+
+  /* 模态框的背景样式 */
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 1; /* 保证模态框在最上层 */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.9); /* 半透明黑色背景 */
+  }
+
+  /* 模态框图片样式 */
+  .modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    height: auto;
+  }
+
+  /* 图片说明样式 */
+  #caption {
+    color: #ccc;
+    text-align: center;
+    padding: 10px;
+    font-size: 18px;
+  }
+
+  /* 关闭按钮的样式 */
+  .close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+    cursor: pointer;
+  }
+
+  .close:hover,
+  .close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* 图片描述 */
+#caption {
+  margin: 20px;
+  font-size: 16px;
+  color: #fff;
+  text-align: center;
+}
+
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <img src="../../../../peizhi/tubiao.png" class="site-logo" alt="电子课本资源网">
+  <span class="site-title">电子课本资源网</span>
+</header>
+
+<div id="peizhiPreviewWrap">
+  <img id="peizhiPreview" src="../../../../peizhi/gongzonghao.jpg" alt="peizhi 预览" />
+  <div class="peizhi-caption">
+    <div class="peizhi-line">扫码二维码关注公众号</div>
+    <div class="peizhi-line">可免费快速获取电子课本</div>
+  </div>
+</div>
+
+<main class="container">
+
+
+<nav class="breadcrumb"><a href="../../../../index.html">首页</a> > <a href="../../../../xiaoxue/index.html">小学</a> > <a href="../../../../xiaoxue/ernianji/index.html">二年级</a> > <a href="../../../../xiaoxue/ernianji/yishu/index.html">艺术</a> > <a href="../../../../xiaoxue/ernianji/yishu/jiaokeban/index.html">教科版</a></nav>
+
+<h1>小学 二年级 艺术 教科版</h1>
+<div class="grid">
+<div class="card">
+  <a href="../../../../xiaoxue-ernianji-yishu-jiaokeban-1967.html" class="card-link">
+    <img src="https://r3-ndr.ykt.cbern.com.cn/edu_product/esp/assets/74a80395-1298-4b1c-87ac-3fe3b24c8311.t/zh-CN/1688378143262/transcode/image/1.jpg?v=1688385197794&x-eos-process=image/format,webp" alt="小学 艺术 教科版 二年级 义务教育教科书 艺术二年级上册">
+    <div class="card-text tip">在公众号输入编码或666获取电子课本</div>
+    <div class="card-text code">编码：1967</div>
+    <div class="card-text meta">小学</div>
+    <div class="card-text meta">二年级</div>
+    <div class="card-text meta">艺术</div>
+    <div class="card-text meta">教科版</div>
+  </a>
+</div>
+<div class="card">
+  <a href="../../../../xiaoxue-ernianji-yishu-jiaokeban-1968.html" class="card-link">
+    <img src="https://r3-ndr.ykt.cbern.com.cn/edu_product/esp/assets/b603310e-bca4-48ab-aa57-cb3875c4f998.t/zh-CN/1688378238743/transcode/image/1.jpg?v=1688390700690&x-eos-process=image/format,webp" alt="小学 艺术 教科版 二年级 义务教育教科书 艺术二年级下册">
+    <div class="card-text tip">在公众号输入编码或666获取电子课本</div>
+    <div class="card-text code">编码：1968</div>
+    <div class="card-text meta">小学</div>
+    <div class="card-text meta">二年级</div>
+    <div class="card-text meta">艺术</div>
+    <div class="card-text meta">教科版</div>
+  </a>
+</div></div>
+
+
+
+</main>
+
+<footer id="siteFooter">
+  <div class="footer-icp">皖ICP备2025094574号-1</div>
+  <div class="footer-desc">电子课本网提供在线电子课本导航服务，涵盖小学、初中和高中电子教科书，包括语文、数学、英语、物理、化学、生物、历史、地理及政治等新版本电子教材导航。</div>
+  <div class="footer-copyright">本站所有图片均归对应的出版社所有，未经允许不得复制转发或商用，如需要哪本书请到正版授权经营的门店或平台购买</div>
+  <div class="footer-warning">本站旨在促进义务教育事业的发展，促讲基础教育信息的交流，不存储电子课本，所有导航链接均收集于网络，若侵犯了您的权益，请联系我们删除:332380893@qq.com</div>
+</footer>
+
+</body>
+</html>
